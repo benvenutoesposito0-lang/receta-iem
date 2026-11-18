@@ -1,0 +1,203 @@
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #F5EFE5;
+    color: #3D352D;
+    line-height: 1.7;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+nav {
+    background-color: #65734B;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #E5C99F;
+    transform: translateY(-2px);
+}
+
+/* TÍTULO PRINCIPAL */
+body > h1 {
+    text-align: center;
+    color: #79543B;
+    font-size: 38px;
+    margin: 40px 15px 20px;
+    text-transform: capitalize;
+}
+
+/* IMAGEN PRINCIPAL */
+body > img:first-of-type {
+    display: block;
+    width: 60%;
+    max-width: 650px;
+    height: 380px;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+/* DESCRIPCIÓN DE LA IMAGEN */
+body > h1 + img + p {
+    text-align: center;
+    color: #75685A;
+    font-style: italic;
+    margin: 15px auto 40px;
+    max-width: 700px;
+    padding: 0 15px;
+}
+
+/* SECCIONES */
+.historia,
+.Ingredientes,
+.Preparación {
+    background-color: #FFFFFF;
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 35px 40px;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(77, 57, 37, 0.09);
+    border-left: 6px solid #8A9A65;
+}
+
+/* TÍTULOS DE SECCIÓN */
+.historia h1,
+.Ingredientes h1,
+.Preparación h1 {
+    color: #65734B;
+    font-size: 27px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    border-bottom: 2px solid #E8DDCC;
+    padding-bottom: 10px;
+}
+
+/* TEXTOS */
+.historia p,
+.Ingredientes p,
+.Preparación p {
+    font-size: 16px;
+    color: #51473D;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+/* VIDEO */
+iframe {
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    margin: 40px auto;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* IMÁGENES SECUNDARIAS */
+iframe ~ img {
+    width: 350px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.13);
+    transition: transform 0.3s;
+}
+
+iframe ~ img:hover {
+    transform: scale(1.04);
+}
+
+/* REFERENCIA */
+body > a {
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    color: #65734B;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid #65734B;
+    padding-bottom: 5px;
+}
+
+body > a:hover {
+    color: #79543B;
+    border-color: #79543B;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #3D4932;
+    color: #F5EFE5;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    font-size: 15px;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+@media (max-width: 650px) {
+
+    nav {
+        gap: 15px;
+        padding: 15px 8px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    body > h1 {
+        font-size: 27px;
+    }
+
+    body > img:first-of-type {
+        width: 90%;
+        height: 260px;
+    }
+
+    .historia,
+    .Ingredientes,
+    .Preparación {
+        width: 92%;
+        padding: 22px;
+    }
+
+    iframe {
+        width: 92%;
+    }
+
+    iframe ~ img {
+        display: block;
+        width: 90%;
+        height: 240px;
+        margin: 15px auto;
+    }
+}
